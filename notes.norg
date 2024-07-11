@@ -1,0 +1,84 @@
+@document.meta
+title: notes
+description:
+authors: priest
+categories:
+created: 2024-07-08T05:32:54-0300
+updated: 2024-07-11T03:41:46-0300
+version: 1.1.1
+@end
+
+*TRY NOT rm IT THIS TIME*
+
+* Layout Prototipo
+  [Desktop]{https://wireframe.cc/uVW3l8}
+	Alternativa
+  --- Secciones divididas en paginas similar a [modelica]{https://www.modelica.com.ar/} pero interactivo.
+  --- La seccion de categorias pasaria a ser un expocicion interactiva
+
+  [Mobil]{https://wireframe.cc/Xn0OdJ}
+
+** Ideas
+    marmol as bacgroud texture.
+   www.itatimarmoleria.com.ar
+   https://www.vigamix.ar/
+
+*  Que comprende
+
+   certificado ssl, ejemplo de http://www.sansonemateriales.com.ar/
+   hosting (si las visitas explotan puede aumentar el costo, pero estamos hablando de mas de 100k diarias ), mitigacion contra ataques ddos;
+   cambios a precios y promociones(8 al mes)
+   Pagina web estatica tipo landinga-page, reactiva (layout funciona en desktop y movil).
+
+** about the domain
+   obtencion del domino, explicar que es y que se paga anual y los riesgos con la perdida del dominio.
+   absoluto.com is taken by a german company
+   open domains: absoluto.biz,.ar
+   si estan abiertos a diferentes TLD, aparte de .com.
+   altenrativas: www.dominio.*
+
+
+* Info and needs
+  About: amoblamientos, maroleria, espacio de disenio.
+  (to lose, need focus, disenio de interior en marmol?)
+
+** overview
+  Identity (respect for the craft)
+  - lleve acuestas las fechas inportantes?
+
+** logistic reach
+   toda salta
+
+** Contacts
+   horarios de atencion
+   mensajes, wasap
+   email.
+   locales fisicos: 2
+
+** Features
+   promotions for products
+
+** competencia
+   modelica
+   goum
+   laroca marmoleria
+   viga
+   colback
+   lusso marmol
+
+   marmoleria tropa
+   fabrica de amoblamientos
+
+
+*  Assets
+   - Have:
+	 *2 logos* (both sexy but chose one, meybe the last one as a closer( bottom of the page, abobe footer, centered. ))
+	 *representaive picture* (suck ass, looks like it belongs to a iteriors decoration company)
+	 *cute cacth phrase*
+	 *stock photo*
+
+   - Need:
+	 pictures of locals
+
+
+
