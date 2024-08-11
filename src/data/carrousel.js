@@ -2,22 +2,22 @@ let placeHolder = "https://placehold.co/600x400";
 
 export const data = [
   {
-    name: "Material 1",
+    name: "Slide 1",
   },
   {
-    name: "Material 2",
+    name: "Slide 2",
   },
   {
-    name: "Material 3",
+    name: "Slide 3",
   },
   {
-    name: "Material 4",
+    name: "Slide 4",
   },
   {
-    name: "Material 5",
+    name: "Slide 5",
   },
   {
-    name: "Material 6",
+    name: "Slide 6",
   },
 ];
 

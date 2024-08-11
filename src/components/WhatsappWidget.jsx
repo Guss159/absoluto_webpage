@@ -1,12 +1,14 @@
-import { useState, useRef } from "react";
+import { useState } from "react";
 import Container from "react-bootstrap/Container";
-import Overlay from "react-bootstrap/Overlay";
+import Modal from "react-bootstrap/Modal";
+import Button from "react-bootstrap/Button";
+import Image from "react-bootstrap/Image";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const WhatsappWidget = (props) => {
   const [show, setShow] = useState(false);
   const [hover, setHover] = useState(false);
-  const target = useRef(null);
+
   const phoneNumber = "";
 
   const openWhatsapp = (phoneNumber) => {
@@ -27,6 +29,7 @@ const WhatsappWidget = (props) => {
       setShow(!show);
     }
   };
+  const handleClose = () => setShow(false);
 
   // TODO: background for  font awesomo
   // <div className="rounded-circle bg-primary" >
@@ -45,7 +48,6 @@ const WhatsappWidget = (props) => {
             icon="fa-brands fa-whatsapp"
             size="2xl"
             flip={hover}
-            ref={target}
             onMouseEnter={() => setHover(true)}
             onMouseLeave={() => setHover(false)}
             style={{ cursor: "pointer" }}
@@ -53,31 +55,23 @@ const WhatsappWidget = (props) => {
           />
         </span>
       </div>
-
-      <Overlay target={target.current} show={show} placement="right">
-        {({
-          placement: _placement,
-          arrowProps: _arrowProps,
-          show: _show,
-          popper: _popper,
-          hasDoneInitialMeasure: _hasDoneInitialMeasure,
-          ...props
-        }) => (
-          <div
-            {...props}
-            style={{
-              position: "absolute",
-              backgroundColor: "rgba(255, 100, 100, 0.85)",
-              padding: "2px 10px",
-              color: "white",
-              borderRadius: 3,
-              ...props.style,
-            }}
-          >
-            Simple tooltip
-          </div>
-        )}
-      </Overlay>
+      <Modal
+        className="mh-100 mw-100"
+        show={show}
+        onHide={handleClose}
+        // size="lg"
+        // aria-labelledby="contained-modal-title-vcenter"
+        centered
+      >
+        <Modal.Body>
+          <Image src="src/assets/qrcode.svg" fluid rounded />
+        </Modal.Body>
+        <Modal.Footer className="justify-content-center">
+          <Button variant="secondary" onClick={openWhatsapp}>
+            Abrir Whatsapp Web
+          </Button>
+        </Modal.Footer>
+      </Modal>
     </Container>
   );
 };

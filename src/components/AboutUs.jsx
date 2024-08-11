@@ -1,22 +1,18 @@
+import Stack from "react-bootstrap/Stack";
 import Container from "react-bootstrap/Container";
-import Section from "./Section";
 import Placeholder from "react-bootstrap/Placeholder";
 
 const AboutUs = () => {
   return (
-    <Section
-      id="about"
-      className="m-section text-center"
-      style={{ height: "80vh" }}
-    >
-      <Container className="my-5">
+    <Container className="box box-bg border-top-0 border-bottom-0" id="about">
+      <Stack className="m-3 about-us text-center align-items-center justify-content-center">
         <h2 className="mb-4">Quienes somos</h2>
-        <p>
+        <p className="w-100">
           <Placeholder xs={2} /> <Placeholder xs={8} /> <Placeholder xs={5} />
           <Placeholder xs={3} /> <Placeholder xs={4} /> <Placeholder xs={5} />
         </p>
-      </Container>
-    </Section>
+      </Stack>
+    </Container>
   );
 };
 

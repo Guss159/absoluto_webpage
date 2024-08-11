@@ -9,29 +9,25 @@ const CarouselCard = ({ name, img, imgDesc }) => {
 		proach does seem to
 	*/
 
-  let styleText = {
-    top: "2rem",
-    right: "1rem",
-    // zIndex: 4000
-  };
 
   return (
     <Container>
-      <div className="position-absolute" style={styleText}>
+      <Container className="position-absolute top-0 ms-5" fluid >
         <h3>{name}</h3>
         <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-      </div>
-      <div className="d-flex mh-100 mw-100">
-        <div className="w-75 me-4 ms-5">
+      </Container>
+      <Container className="d-flex h-100 mh-100 mw-100">
+        <Container className="d-flex justify-content-center w-75 me-4 ms-5">
           <Image
-            className="object-fit-fill"
-            style={{ objectPosition: "50%" }}
+            // className="object-fit-fill"
+            // style={{ objectPosition: "50%" }}
+      style={{ objectFit: "scale-down" }}
             src={img}
             alt={imgDesc}
             fluid
             rounded
           />
-        </div>
+        </Container>
         {/* TODO: BIGGER  */}
         <Button
           className="align-self-end mb-3"
@@ -40,7 +36,7 @@ const CarouselCard = ({ name, img, imgDesc }) => {
         >
           CTA
         </Button>
-      </div>
+      </Container>
     </Container>
   );
 };

@@ -4,25 +4,16 @@ import Navbar from "react-bootstrap/Navbar";
 import WhatsappWidget from "./WhatsappWidget";
 import Stack from "react-bootstrap/Stack";
 
-const NavBar = () => {
+const NavbarComponent = () => {
   return (
     <Navbar
-      className="mt-2 container mx-auto p-0 bg-gradient bg-opacity-75 p-0 rounded-3 border-bottom border-top shadow-lg"
-      bg="black"
+      className="nav-bg navbar-container border-bottom shadow-lg"
       expand="lg"
-      fixed="top"
-      data-bs-theme="dark"
-	  style={{ width:"90%" }}
+      sticky="top"
     >
       <Container className="py-2 px-3">
         <Navbar.Brand href="#home">
-          <img
-            alt=""
-            src="src/assets/logo.svg"
-            width="30"
-            height="30"
-            className="d-inline-block align-top"
-          />{" "}
+          <img alt="" src="src/assets/logo.svg" width="30" height="30" />{" "}
           ABSOLUTO
         </Navbar.Brand>
         <Stack direction="horizontal">
@@ -44,4 +35,4 @@ const NavBar = () => {
   );
 };
 
-export default NavBar;
+export default NavbarComponent;

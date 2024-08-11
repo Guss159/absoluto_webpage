@@ -6,7 +6,6 @@ import Row from "react-bootstrap/Row";
 import Container from "react-bootstrap/Container";
 import CarouselCard from "./CarouselCard";
 import { useState } from "react";
-import "./CarouselComposed.css";
 
 const CarouselComposed = () => {
   /*
@@ -34,37 +33,36 @@ const CarouselComposed = () => {
       <CarouselCard {...item} />
     </Carousel.Item>
   ));
-  //  NOTE: change the align-items-center and d-lg-flex to block if not gona use scale-down
-  let wingsClass = "carousel-col p-0 d-none d-lg-flex align-items-center";
-  let wingsMargin = 3;
+  //  NOTE: change the align-items-center and d-xl-flex to block if not gona use scale-down
+  let wingsClass = "p-0 d-none d-xl-flex align-items-center";
+  let wingsMargin = 1;
+  let rightWing = `${wingsClass} ms-${wingsMargin}`;
+  let leftWing = `${wingsClass} me-${wingsMargin}`;
   // TODO: ADD fade to wings
 
   return (
     <Row
-      className="mx-auto mw-100"
-      style={{ height: "33%", backgroundColor: "rgba(0, 0, 0, 0.2)" }}
+      className="carousel-container rounded mx-0 mb-4 flex-grow-1"
+      fluid
     >
-      <Col className={`${wingsClass} ms-${wingsMargin}`}>
+      <Col className={rightWing}>
         <CarouselWing
           handler={() => wingOnClickHandler(index, data.length, -1)}
           {...data[indexWrapper(index, data.length, -1)]}
         />
       </Col>
-      <Col className="carousel-col p-0" lg={9} xl={8}>
+      <Col className="flex-grow-1 my-1 p-0" lg={9} xl={8}>
         <Carousel
           interval={null}
           activeIndex={index}
           onSelect={handleSelect}
           wrap
           touch
-          style={{
-            backgroundColor: "rgba(0, 0, 0, 0.2)",
-          }}
         >
           {carouselItems}
         </Carousel>
       </Col>
-      <Col className={`${wingsClass} me-${wingsMargin}`}>
+      <Col className={leftWing}>
         <CarouselWing
           handler={() => wingOnClickHandler(index, data.length, 1)}
           {...data[indexWrapper(index, data.length, 1)]}
