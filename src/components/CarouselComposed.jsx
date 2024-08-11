@@ -33,7 +33,7 @@ const CarouselComposed = () => {
     </Carousel.Item>
   ));
   //  NOTE: change the align-items-center and d-xl-flex to block if not gona use scale-down
-  let wingsClass = "p-0 d-none d-xl-flex align-items-center";
+  let wingsClass = "p-0 d-none d-lg-flex align-items-center";
   let wingsMargin = 1;
   let rightWing = `${wingsClass} ms-${wingsMargin}`;
   let leftWing = `${wingsClass} me-${wingsMargin}`;
@@ -49,7 +49,7 @@ const CarouselComposed = () => {
           {...data[indexWrapper(index, data.length, -1)]}
         />
       </Col>
-      <Col className="my-auto p-0" lg={9} xl={8}>
+      <Col className="my-auto p-0" lg={8}>
         <Carousel
           interval={null}
           activeIndex={index}
