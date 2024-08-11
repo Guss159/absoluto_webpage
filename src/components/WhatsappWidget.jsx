@@ -34,7 +34,7 @@ const WhatsappWidget = (props) => {
   // TODO: background for  font awesomo
   // <div className="rounded-circle bg-primary" >
   return (
-    <Container {...props}>
+    <div>
       <div>
         <span className="fa-stack">
           <FontAwesomeIcon
@@ -72,7 +72,7 @@ const WhatsappWidget = (props) => {
           </Button>
         </Modal.Footer>
       </Modal>
-    </Container>
+    </div>
   );
 };
 

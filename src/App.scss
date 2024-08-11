@@ -44,8 +44,9 @@ body {
 }
 
 :root {
-  --nav--height: 5rem;
-  --nav--margin-top: 1vh; // needs to be vh
+  --nav--margin-top: 1vh; // needs to be vh.
+  --nav--height: 3rem; // set on render.
+  --nav--size: calc(var(--nav--margin-top) + var(--nav--height));
 }
 
 .box {
@@ -72,10 +73,12 @@ body {
   @extend .my-5;
 }
 
+.navbar--spacer {
+  min-height: var(--nav--size);
+}
+
 .navbar {
   margin-top: var(--nav--margin-top);
-  height: var(--nav--height);
-  max-height: var(--nav--height);
 }
 
 .navbar--bg {
@@ -88,20 +91,20 @@ body {
 }
 
 .offset:target {
-  scroll-padding-top: calc(var(--nav--height) - 3rem);
+  scroll-padding-top: calc(var(--nav--size) - 3rem);
 }
 
 .landing__stack {
-  --size-y: calc(calc(100vh - var(--nav--margin-top)) - var(--nav--height));
+  --stack--height: calc(100vh - var(--nav--size));
   --spacing: 6vh;
   padding: var(--spacing) 0;
   gap: var(--spacing);
-  height: calc(calc(var(--size-y) - var(--spacing)) * 2);
+  height: calc(calc(var(--stack--height) - var(--spacing)) * 2);
   min-height: 550px;
 
   @media only screen and (min-height: 780px) {
     --spacing: 2vh;
-    height: var(--size-y);
+    height: var(--stack--height);
   }
 
 }
