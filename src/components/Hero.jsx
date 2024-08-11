@@ -1,18 +1,23 @@
+import Container from "react-bootstrap/Container";
 import Button from "react-bootstrap/Button";
-import BgContainer from "./BgContainer";
 
 const Hero = () => {
   return (
-    <BgContainer className="box box-bg hero-container border-top-0 border-bottom-0">
-      <h1 className="brand">Absoluto</h1>
-      <p>
-        Dolorem ipsum dolor sit amet consectetur <br />
-        adipiscing elit. sed do.
-      </p>
-      <Button className="cta" size="lg" variant="outline-light">
-        Call to action
-      </Button>
-    </BgContainer>
+      <Container
+        className="hero box box--bg border-top-0 border-bottom-0"
+        fluid
+      >
+    <Container fluid>
+        <h1 className="hero__brand">Absoluto</h1>
+        <p className="hero__p">
+          Dolorem ipsum dolor sit amet consectetur <br />
+          adipiscing elit. sed do.
+        </p>
+        <Button className="hero__cta" size="lg" variant="outline-light">
+          Call to action
+        </Button>
+      </Container>
+    </Container>
   );
 };
 

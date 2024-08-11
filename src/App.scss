@@ -9,106 +9,37 @@
 // /* } */
 
 body {
-  --s: 300px; /* control the size */
+  --s: 300px;
+  /* control the size */
   --c1: #f2f2f2;
   --c2: #cdcbcc;
   --c3: #999999;
 
   --_g: 0 120deg, #0000 0;
-  background: conic-gradient(
-      from 0deg at calc(500% / 6) calc(100% / 3),
-      var(--c3) var(--_g)
-    ),
-    conic-gradient(
-      from -120deg at calc(100% / 6) calc(100% / 3),
-      var(--c2) var(--_g)
-    ),
-    conic-gradient(
-      from 120deg at calc(100% / 3) calc(500% / 6),
-      var(--c1) var(--_g)
-    ),
-    conic-gradient(
-      from 120deg at calc(200% / 3) calc(500% / 6),
-      var(--c1) var(--_g)
-    ),
-    conic-gradient(
-      from -180deg at calc(100% / 3) 50%,
+  background: conic-gradient(from 0deg at calc(500% / 6) calc(100% / 3),
+      var(--c3) var(--_g)),
+    conic-gradient(from -120deg at calc(100% / 6) calc(100% / 3),
+      var(--c2) var(--_g)),
+    conic-gradient(from 120deg at calc(100% / 3) calc(500% / 6),
+      var(--c1) var(--_g)),
+    conic-gradient(from 120deg at calc(200% / 3) calc(500% / 6),
+      var(--c1) var(--_g)),
+    conic-gradient(from -180deg at calc(100% / 3) 50%,
       var(--c2) 60deg,
-      var(--c1) var(--_g)
-    ),
-    conic-gradient(
-      from 60deg at calc(200% / 3) 50%,
+      var(--c1) var(--_g)),
+    conic-gradient(from 60deg at calc(200% / 3) 50%,
       var(--c1) 60deg,
-      var(--c3) var(--_g)
-    ),
-    conic-gradient(
-      from -60deg at 50% calc(100% / 3),
+      var(--c3) var(--_g)),
+    conic-gradient(from -60deg at 50% calc(100% / 3),
       var(--c1) 120deg,
       var(--c2) 0 240deg,
-      var(--c3) 0
-    );
+      var(--c3) 0);
   background-size: calc(var(--s) * 1.732) var(--s);
 }
 
 :root {
-  --nav-height: 5rem;
-}
-
-// /* .modal-open { */
-// /* /* WORKAROUND: Fix content shifting right*/
-// */
-// /*   overflow-y: inherit !important; */
-// /*   padding-right:0 !important; */
-// /* } */
-
-.navbar-container {
-  height: var(--nav-height);
-  top: 1vh;
-}
-
-.offset:target {
-  scroll-padding-top: calc(var(--nav-height) - 3rem);
-}
-
-.section-dimensions {
-  width: 90%;
-  margin: 8rem auto;
-}
-
-.landing__stack {
-  height: calc(100vh - var(--nav-height));
-}
-
-.hero__BgContainer {
-  height: 50%;
-  margin: 0 !important;
-}
-.hero-container.brand {
-  right: 20%;
-}
-.hero-container.p {
-  right: 25%;
-}
-.hero-container.cta {
-  top: 25%;
-}
-
-.carousel-container {
-  background-color: rgba(0, 0, 0, 0.2);
-}
-
-.about-us {
-  min-height: 60vh;
-}
-
- //  new
-
-.nav-bg {
-  background-color: rgba(tint-color($primary, 50%), .1) !important
-}
-
-.nav-link.active {
-  @extend .text-decoration-underline !optional;
+  --nav--height: 5rem;
+  --nav--margin-top: 1vh; // needs to be vh
 }
 
 .box {
@@ -127,6 +58,81 @@ body {
   @extend .text-white;
 }
 
-.box-bg {
+.box--bg {
   background-color: rgba(0, 0, 0, 0.5);
+}
+
+.box--margin {
+  @extend .my-5;
+}
+
+.navbar {
+  margin-top: var(--nav--margin-top);
+  height: var(--nav--height);
+  max-height: var(--nav--height);
+}
+
+.navbar--bg {
+  background-color: rgba(tint-color($primary, 50%), .1) !important
+}
+
+.nav-link.active {
+  /* WORKAROUND: */
+  @extend .text-decoration-underline !optional;
+}
+
+.offset:target {
+  scroll-padding-top: calc(var(--nav--height) - 3rem);
+}
+
+.landing__stack {
+  --size-y: calc(calc(100vh - var(--nav--margin-top)) - var(--nav--height));
+  --spacing: 6vh;
+  padding: var(--spacing) 0;
+  gap: var(--spacing);
+  height: calc(calc(var(--size-y) - var(--spacing)) * 2);
+  min-height: 550px;
+
+  @media only screen and (min-height: 780px) {
+    --spacing: 2vh;
+    height: var(--size-y);
+  }
+
+}
+
+.hero {
+  // TODO: this class is unneeded
+  height: 50%;
+
+  // margin: 0 !important;
+  @media only screen and (min-height: 780px) {
+    height: 50%;
+  }
+}
+
+.hero__brand {
+  right: 20%;
+}
+
+.hero__p {
+  right: 25%;
+}
+
+.hero__cta {
+  top: 25%;
+}
+
+.carousel__row--bg {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.about__stack {
+  min-height: 60vh;
+}
+
+.icon {
+  cursor: pointer;
+  padding: 0em 0.5em;
+  --fa-animation-duration: 2s;
+  --fa-bounce-height: -10px;
 }

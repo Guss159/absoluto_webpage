@@ -7,7 +7,7 @@ import Stack from "react-bootstrap/Stack";
 const NavbarComponent = () => {
   return (
     <Navbar
-      className="nav-bg navbar-container border-bottom shadow-lg"
+      className="navbar navbar--bg p-0 border-bottom shadow-lg"
       expand="lg"
       sticky="top"
     >
@@ -22,10 +22,10 @@ const NavbarComponent = () => {
           </Navbar.Text>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
-            <Nav className="me-auto">
-              <Nav.Link href="#home">Home</Nav.Link>
+            <Nav className=" offset me-auto">
+              <Nav.Link  href="#home">Home</Nav.Link>
               <Nav.Link href="#about">Conocenos</Nav.Link>
-              <Nav.Link href="#contact"> Contactanos </Nav.Link>
+              <Nav.Link className=" offset" href="#contact"> Contactanos </Nav.Link>
             </Nav>
           </Navbar.Collapse>
         </Stack>

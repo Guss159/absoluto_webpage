@@ -19,19 +19,16 @@ function App() {
   return (
     <>
       <Container className="gx-5" fluid="xxl" id="home">
-          <NavbarComponent />
-        <Stack
-          className="landing__stack"
-          as="header"
-        >
-            <Hero id="home" />
-            <CarouselComposed />
+        <NavbarComponent />
+        <Stack className="landing__stack" as="header">
+          <Hero id="home" />
+          <CarouselComposed />
         </Stack>
         {/* <ContactForm id="contact" /> */}
         <Banner />
         <AboutUs />
         <Establishments />
-      <Footer />
+        <Footer />
       </Container>
     </>
   );

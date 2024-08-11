@@ -1,9 +1,8 @@
-import { data } from "../data/carrousel";
+import { data } from "../data/data_carousel";
 import Carousel from "react-bootstrap/Carousel";
 import CarouselWing from "./CarouselWing";
 import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
-import Container from "react-bootstrap/Container";
 import CarouselCard from "./CarouselCard";
 import { useState } from "react";
 
@@ -42,8 +41,7 @@ const CarouselComposed = () => {
 
   return (
     <Row
-      className="carousel-container rounded mx-0 mb-4 flex-grow-1"
-      fluid
+      className="carousel__row--bg mx-0 flex-grow-1 rounded"
     >
       <Col className={rightWing}>
         <CarouselWing

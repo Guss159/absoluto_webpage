@@ -4,8 +4,8 @@ import Placeholder from "react-bootstrap/Placeholder";
 
 const AboutUs = () => {
   return (
-    <Container className="box box-bg border-top-0 border-bottom-0" id="about">
-      <Stack className="m-3 about-us text-center align-items-center justify-content-center">
+    <Container className="box box--bg box--margin border-top-0 border-bottom-0" id="about" fluid>
+      <Stack className="about__stack m-3 text-center align-items-center justify-content-center">
         <h2 className="mb-4">Quienes somos</h2>
         <p className="w-100">
           <Placeholder xs={2} /> <Placeholder xs={8} /> <Placeholder xs={5} />
