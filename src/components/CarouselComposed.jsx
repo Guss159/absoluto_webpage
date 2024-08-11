@@ -49,7 +49,7 @@ const CarouselComposed = () => {
           {...data[indexWrapper(index, data.length, -1)]}
         />
       </Col>
-      <Col className="flex-grow-1 my-1 p-0" lg={9} xl={8}>
+      <Col className="my-auto p-0" lg={9} xl={8}>
         <Carousel
           interval={null}
           activeIndex={index}

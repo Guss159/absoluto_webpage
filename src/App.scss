@@ -35,6 +35,12 @@ body {
       var(--c2) 0 240deg,
       var(--c3) 0);
   background-size: calc(var(--s) * 1.732) var(--s);
+
+}
+
+html,
+body {
+  min-width: 360px;
 }
 
 :root {
