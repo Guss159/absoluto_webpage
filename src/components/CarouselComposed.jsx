@@ -35,7 +35,7 @@ const CarouselComposed = () => {
   // TODO: ADD fade to wings
 
   return (
-    <Row className="carousel__row--bg mx-0 flex-grow-1 rounded">
+    <Row className="carousel__row--bg mx-0 flex-grow-1 shadow-lg rounded">
       <Col className={rightWing}>
         <CarouselWing
           handler={() => wingOnClickHandler(index, dataCarousel.length, -1)}

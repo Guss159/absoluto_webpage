@@ -11,8 +11,8 @@ const Highlights = () => {
   }
 
   return (
-    <Container className="box box--bg box--margin offset border-top-0 border-bottom-0">
-	  <Carousel interval={18000}>
+    <Container className="box box--bg box--margin offset border-top-0 border-bottom-0" fluid>
+	  <Carousel interval={18000} >
         {groupedData.map((pair, index) => (
           <Carousel.Item key={index} >
             <Stack className="p-5">

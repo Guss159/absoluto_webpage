@@ -8,35 +8,6 @@
 // /*   background-size: cover; */
 // /* } */
 
-body {
-  --s: 300px;
-  /* control the size */
-  --c1: #f2f2f2;
-  --c2: #cdcbcc;
-  --c3: #999999;
-
-  --_g: 0 120deg, #0000 0;
-  background: conic-gradient(from 0deg at calc(500% / 6) calc(100% / 3),
-      var(--c3) var(--_g)),
-    conic-gradient(from -120deg at calc(100% / 6) calc(100% / 3),
-      var(--c2) var(--_g)),
-    conic-gradient(from 120deg at calc(100% / 3) calc(500% / 6),
-      var(--c1) var(--_g)),
-    conic-gradient(from 120deg at calc(200% / 3) calc(500% / 6),
-      var(--c1) var(--_g)),
-    conic-gradient(from -180deg at calc(100% / 3) 50%,
-      var(--c2) 60deg,
-      var(--c1) var(--_g)),
-    conic-gradient(from 60deg at calc(200% / 3) 50%,
-      var(--c1) 60deg,
-      var(--c3) var(--_g)),
-    conic-gradient(from -60deg at 50% calc(100% / 3),
-      var(--c1) 120deg,
-      var(--c2) 0 240deg,
-      var(--c3) 0);
-  background-size: calc(var(--s) * 1.732) var(--s);
-
-}
 
 html,
 body {
@@ -71,6 +42,7 @@ body {
 
 .box--margin {
   @extend .my-5;
+  @extend .mx-0;
 }
 
 .navbar--spacer {
@@ -82,7 +54,7 @@ body {
 }
 
 .navbar--bg {
-  background-color: rgba(tint-color($primary, 20%), .8) !important
+  background-color: rgba(tint-color($primary, 20%), .3) !important
 }
 
 .nav-link.active {
@@ -112,7 +84,9 @@ body {
 .hero {
   // TODO: this class is unneeded
   height: 50%;
-
+  background: no-repeat;
+  background-image: url("src/assets/hero-background.jpg");
+  background-size: cover;
   // margin: 0 !important;
   @media only screen and (min-height: 780px) {
     height: 50%;

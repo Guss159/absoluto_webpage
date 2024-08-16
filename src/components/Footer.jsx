@@ -26,7 +26,7 @@ const Footer = () => {
             <FontAwesomeIcon key={icon} className="icon" icon={icon} size="2xl" bounce />
           ))}
         </Col>
-        <Col></Col>
+        <Col><p>absoluto.ceal@gmail.com</p></Col>
       </Row>
     </Container>
   );

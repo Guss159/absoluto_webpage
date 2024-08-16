@@ -16,7 +16,7 @@ const NavbarComponent = () => {
     <>
       <Navbar
         ref={ref}
-        className="navbar navbar--bg p-0 mx-4 rounded border-bottom shadow-lg"
+        className="navbar navbar--bg p-0 mx-4 rounded border-bottom shadow"
         expand="lg"
         fixed="top"
       >
@@ -32,8 +32,8 @@ const NavbarComponent = () => {
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav>
               <Nav.Link href="#home">Home</Nav.Link>
-              <Nav.Link href="#about">Conocenos</Nav.Link>
-              <Nav.Link href="#contact">Contactanos</Nav.Link>
+              <Nav.Link href="#about">Quienes somos</Nav.Link>
+              <Nav.Link href="#ubicacion">Contactanos</Nav.Link>
             </Nav>
           </Navbar.Collapse>
           <Navbar.Text className="d-none d-lg-flex">

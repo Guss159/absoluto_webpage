@@ -14,12 +14,15 @@ $secundary: $greish;
 @import "bootstrap/scss/variables";
 $border-color: $primary;
 
-$nav-hover-custom: $orange-300;
-$navbar-light-brand-color: $orange-400;
-$navbar-light-brand-hover-color: $orange-400;
-$navbar-light-color: $primary;
-$navbar-light-hover-color: $nav-hover-custom;
-$navbar-light-active-color: $nav-hover-custom;
+$navbar-light-brand-color: $orange-900;
+$navbar-light-brand-hover-color: $orange-900;
+
+$navbar-links-color: $orange-900;
+$navbar-light-color: $navbar-links-color;
+$navbar-light-hover-color: $navbar-links-color;
+$navbar-light-active-color: $navbar-links-color;
+
+$box-shadow-lg:0 1rem 3rem rgba($black, .45);
 
 $theme-colors: map-remove($theme-colors, "info", "success");
 // Default map overrides here
