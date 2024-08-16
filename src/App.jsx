@@ -14,6 +14,7 @@ import CarouselComposed from "./components/CarouselComposed";
 import Establishments from "./components/Establishments";
 import Banner from "./components/Banner";
 import AboutUs from "./components/AboutUs";
+import Highlights from "./components/Highlights"
 
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
         {/* <ContactForm id="contact" /> */}
         <Banner />
         <AboutUs />
+        <Highlights />
         <Establishments />
         <Footer />
       </Container>

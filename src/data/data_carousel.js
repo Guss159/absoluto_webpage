@@ -1,6 +1,6 @@
 let placeHolder = "https://placehold.co/600x400";
 
-export const data = [
+export const dataCarousel = [
   {
     name: "Slide 1",
   },
@@ -22,7 +22,7 @@ export const data = [
 ];
 
 let counter = 1;
-data.forEach((obj) => {
+dataCarousel.forEach((obj) => {
   obj.id = counter++;
   obj.imgDesc = "Picture of " + obj.name;
   obj.img = placeHolder;

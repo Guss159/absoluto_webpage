@@ -1,4 +1,4 @@
-import { data } from "../data/data_carousel";
+import { dataCarousel } from "../data/data_carousel";
 import Carousel from "react-bootstrap/Carousel";
 import CarouselWing from "./CarouselWing";
 import Col from "react-bootstrap/Col";
@@ -27,11 +27,6 @@ const CarouselComposed = () => {
     setIndex(indexWrapper(index, length, offset));
   };
 
-  let carouselItems = data.map((item) => (
-    <Carousel.Item key={item.id}>
-      <CarouselCard {...item} />
-    </Carousel.Item>
-  ));
   //  NOTE: change the align-items-center and d-xl-flex to block if not gona use scale-down
   let wingsClass = "p-0 d-none d-lg-flex align-items-center";
   let wingsMargin = 1;
@@ -40,13 +35,11 @@ const CarouselComposed = () => {
   // TODO: ADD fade to wings
 
   return (
-    <Row
-      className="carousel__row--bg mx-0 flex-grow-1 rounded"
-    >
+    <Row className="carousel__row--bg mx-0 flex-grow-1 rounded">
       <Col className={rightWing}>
         <CarouselWing
-          handler={() => wingOnClickHandler(index, data.length, -1)}
-          {...data[indexWrapper(index, data.length, -1)]}
+          handler={() => wingOnClickHandler(index, dataCarousel.length, -1)}
+          {...dataCarousel[indexWrapper(index, dataCarousel.length, -1)]}
         />
       </Col>
       <Col className="my-auto p-0" lg={8}>
@@ -57,13 +50,17 @@ const CarouselComposed = () => {
           wrap
           touch
         >
-          {carouselItems}
+          {dataCarousel.map((item) => (
+            <Carousel.Item key={item.id}>
+              <CarouselCard {...item} />
+            </Carousel.Item>
+          ))}
         </Carousel>
       </Col>
       <Col className={leftWing}>
         <CarouselWing
-          handler={() => wingOnClickHandler(index, data.length, 1)}
-          {...data[indexWrapper(index, data.length, 1)]}
+          handler={() => wingOnClickHandler(index, dataCarousel.length, 1)}
+          {...dataCarousel[indexWrapper(index, dataCarousel.length, 1)]}
         />
       </Col>
     </Row>
