@@ -66,31 +66,29 @@ body {
   scroll-margin-top: calc(var(--nav--size) + 3rem);
 }
 
-.landing__stack {
+.landing__container {
   --stack--height: calc(100vh - var(--nav--size));
   --spacing: 6vh;
   padding: var(--spacing) 0;
-  gap: var(--spacing);
-  height: calc(calc(var(--stack--height) - var(--spacing)) * 2);
-  min-height: 550px;
-
-  @media only screen and (min-height: 780px) {
-    --spacing: 2vh;
     height: var(--stack--height);
-  }
-
+  min-height: 550px;
 }
 
 .hero {
   // TODO: this class is unneeded
-  height: 50%;
+  height: 100%;
   background: no-repeat;
   background-image: url("src/assets/hero-background.jpg");
   background-size: cover;
-  // margin: 0 !important;
-  @media only screen and (min-height: 780px) {
-    height: 50%;
-  }
+}
+
+.hero__container--color{
+background: rgba($primary, 0.2) ;
+}
+
+.hero__background--tint {
+  background-color: rgba($orange-900,.5);
+  background-blend-mode: multiply;
 }
 
 .hero__brand {

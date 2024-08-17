@@ -21,10 +21,10 @@ function App() {
     <>
       <Container className="gx-5" fluid="xxl" id="home">
         <NavbarComponent />
-        <Stack className="landing__stack" as="header">
+        <Container className="landing__container" as="header">
           <Hero id="home" />
+        </Container>
           <CarouselComposed />
-        </Stack>
         {/* <ContactForm id="contact" /> */}
         <Banner />
         <AboutUs />

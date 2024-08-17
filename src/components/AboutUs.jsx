@@ -2,6 +2,9 @@ import Stack from "react-bootstrap/Stack";
 import Container from "react-bootstrap/Container";
 import Placeholder from "react-bootstrap/Placeholder";
 
+// TODO: add the video de fondo, repeat onclick, fades in and out. when video ends.
+// leaves place for the text. add mute button.
+
 const AboutUs = () => {
   return (
     <Container className="box box--bg box--margin offset border-top-0 border-bottom-0" id="about" fluid>

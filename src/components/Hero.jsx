@@ -4,10 +4,12 @@ import Button from "react-bootstrap/Button";
 const Hero = () => {
   return (
       <Container
-        className="hero box box--bg border-top-0 border-bottom-0"
+        className="hero__container--color box p-3 h-100"
         fluid
       >
-    <Container fluid>
+    <Container
+        className="hero hero__background--tint rounded-4"
+	  fluid>
         <h1 className="hero__brand">Absoluto</h1>
         <p className="hero__p">
           Dolorem ipsum dolor sit amet consectetur <br />
