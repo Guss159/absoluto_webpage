@@ -4,7 +4,7 @@ import Button from "react-bootstrap/Button";
 const Hero = () => {
   return (
       <Container
-        className="hero__container--color box p-3 h-100"
+        className="box bg-secondary p-3 h-100"
         fluid
       >
     <Container

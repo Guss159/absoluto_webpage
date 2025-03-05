@@ -14,7 +14,7 @@ const Footer = () => {
   return (
     <Container
       as="footer"
-      className="box box--bg my-5 py-3 border-bottom-0"
+      className="box my-5 py-3 border-bottom-0"
       fluid
     >
       <Row>

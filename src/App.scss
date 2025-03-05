@@ -8,6 +8,9 @@
 // /*   background-size: cover; */
 // /* } */
 
+.heading-font {
+  font-family: 'Open Sans', sans-serif;
+}
 
 html,
 body {
@@ -22,11 +25,10 @@ body {
 
 .box {
   @extend .border;
-  @extend .border-light;
+  @extend .border-secondary;
   @extend .border-opacity-75;
 
   @extend .rounded-4;
-  @extend .shadow-lg;
 
   @extend .d-flex;
   @extend .flex-column;
@@ -34,10 +36,8 @@ body {
   @extend .align-items-center;
 
   @extend .text-white;
-}
 
-.box--bg {
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: $ash_light !important
 }
 
 .box--margin {
@@ -70,7 +70,7 @@ body {
   --stack--height: calc(100vh - var(--nav--size));
   --spacing: 6vh;
   padding: var(--spacing) 0;
-    height: var(--stack--height);
+  height: var(--stack--height);
   min-height: 550px;
 }
 
@@ -82,12 +82,12 @@ body {
   background-size: cover;
 }
 
-.hero__container--color{
-background: rgba($primary, 0.2) ;
+.hero__container--color {
+  background: rgba($gray-800, 0.2);
 }
 
 .hero__background--tint {
-  background-color: rgba($orange-900,.5);
+  background-color: rgba($orange-900, .5);
   background-blend-mode: multiply;
 }
 

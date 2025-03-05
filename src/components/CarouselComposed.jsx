@@ -37,7 +37,7 @@ const CarouselComposed = () => {
   // TODO: ADD fade to wings
 
   return (
-    <Container className="box box--bg box--margin offset border-top-0 border-bottom-0 p-3" id="about" fluid>
+    <Container className="box box--margin offset border-top-0 border-bottom-0 p-3" fluid>
     <Row className="mx-0 flex-grow-1 ">
       <Col className={rightWing}>
         <CarouselWing
